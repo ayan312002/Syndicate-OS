@@ -1,0 +1,8 @@
+#ifndef SERIALPORT_H
+#define SERIALPORT_H
+
+
+void write_serial(char* a);
+char read_serial();
+
+#endif

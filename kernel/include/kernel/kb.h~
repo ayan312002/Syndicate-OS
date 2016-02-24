@@ -1,0 +1,12 @@
+#ifndef KB_H
+#define  KB_H
+
+
+#include <kernel/isr.h>
+#include <stddef.h>
+
+extern void keyboard_install();
+unsigned char getch();
+string gets();
+
+#endif
