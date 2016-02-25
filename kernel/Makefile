@@ -21,7 +21,9 @@ ARCHDIR:=arch/$(HOSTARCH)
 NASMMODE:=32
  
 include $(ARCHDIR)/make.config
-
+# Include build number rules.
+include buildnumber.mak
+ 
 CFLAGS:=$(CFLAGS) $(KERNEL_ARCH_CFLAGS)
 CPPFLAGS:=$(CPPFLAGS) $(KERNEL_ARCH_CPPFLAGS)
 LDFLAGS:=$(LDFLAGS) $(KERNEL_ARCH_LDFLAGS)
@@ -49,6 +51,9 @@ $(CRTEND_OBJ) \
 $(CRTN_OBJ) \
  
 all: Synos.kernel	
+
+a.out: $(OBJ_LINK_LIST)
+	$(CC) $(LDFLAGS) $(BUILD_NUMBER_LDFLAGS) -o $@ $(OBJ_LINK_LIST)
 
 .PHONY: all clean install install-headers install-kernel
  

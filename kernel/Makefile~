@@ -50,7 +50,8 @@ $(OBJS) \
 $(CRTEND_OBJ) \
 $(CRTN_OBJ) \
  
-all: Synos.kernel	
+all: a.out
+	
 
 a.out: $(OBJ_LINK_LIST)
 	$(CC) $(LDFLAGS) $(BUILD_NUMBER_LDFLAGS) -o $@ $(OBJ_LINK_LIST)
