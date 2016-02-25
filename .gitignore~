@@ -1,5 +1,12 @@
-*~
+# Object files
 *.o
+*.ko
+*.obj
+*.elf
+
+# Iso
 *.iso
+
+# Directory
 isodir
 sysroot
