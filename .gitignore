@@ -6,7 +6,6 @@
 
 # Iso
 *.iso
-*.pch
 
 # Directory
 isodir
